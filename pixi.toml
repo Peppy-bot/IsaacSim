@@ -7,7 +7,7 @@ version = "0.1.0"
 
 [tasks]
 build = { cmd = "./build.sh" }
-run = {cmd = "./_build/linux-x86_64/release/isaac-sim.sh", depends-on = "build"}
+run = {cmd = "bash -c 'if [ -f ./_build/linux-x86_64/release/isaac-sim.sh ]; then ./_build/linux-x86_64/release/isaac-sim.sh; else ./build.sh && ./_build/linux-x86_64/release/isaac-sim.sh; fi'"}
 
 [dependencies]
 gcc = "==11.4.0"
