@@ -1,0 +1,14 @@
+[workspace]
+authors = ["Tuatini Godard <email@tuatini.me>"]
+channels = ["conda-forge"]
+name = "isaacsim"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+build = { cmd = "./build.sh" }
+run = {cmd = "./_build/linux-x86_64/release/isaac-sim.sh", depends-on = "build"}
+
+[dependencies]
+gcc = "==11.4.0"
+cxx-compiler = ">=1.5.2,<2"

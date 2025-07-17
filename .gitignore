@@ -162,3 +162,6 @@ results_by_file.json
 
 # EULA check marker file
 .eula_accepted
+
+# Pixi
+.pixi
